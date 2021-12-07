@@ -1,8 +1,8 @@
-use crate::day06::day06;
+use crate::day07::day07;
 
 mod io;
-mod day06;
+mod day07;
 
 fn main() {
-    day06();
+    day07();
 }
