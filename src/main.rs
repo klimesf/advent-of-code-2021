@@ -1,8 +1,9 @@
-use crate::day07::day07;
+use crate::day08::day08;
+extern crate itertools;
 
 mod io;
-mod day07;
+mod day08;
 
 fn main() {
-    day07();
+    day08();
 }
