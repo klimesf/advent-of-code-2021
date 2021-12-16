@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use crate::io::read_lines;
 
 pub(crate) fn day14() {
-    let filename = "input/14.txt";
+    let filename = "input/day14/input.txt";
 
     let mut input: String = "".to_string();
     let mut rules: HashMap<(char, char), char> = HashMap::new();

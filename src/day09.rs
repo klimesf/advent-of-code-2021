@@ -2,7 +2,7 @@ use crate::io::read_lines;
 use std::collections::HashMap;
 
 pub(crate) fn day09() {
-    let filename = "input/09.txt";
+    let filename = "input/day09/input.txt";
     let mut map: Vec<Vec<u32>> = vec!();
 
     if let Ok(lines) = read_lines(filename) {
