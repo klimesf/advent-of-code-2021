@@ -3,7 +3,7 @@ use std::collections::HashSet;
 use crate::io::read_lines;
 
 pub(crate) fn day11() {
-    let filename = "input/11.txt";
+    let filename = "input/day11/input.txt";
 
     let mut numbers: Vec<Vec<u32>> = vec!();
 

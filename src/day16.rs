@@ -3,7 +3,7 @@ use std::collections::VecDeque;
 use crate::io::read_lines;
 
 pub(crate) fn day16() {
-    let filename = "input/16.txt";
+    let filename = "input/day16/input.txt";
 
     if let Ok(lines) = read_lines(filename) {
         for line in lines {

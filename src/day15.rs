@@ -2,7 +2,7 @@ use crate::io::read_lines;
 use priority_queue::double_priority_queue::DoublePriorityQueue;
 
 pub(crate) fn day15() {
-    let filename = "input/15.txt";
+    let filename = "input/day15/input.txt";
     part_a(filename);
     part_b(filename);
 }

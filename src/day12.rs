@@ -13,7 +13,7 @@ struct Explorable {
 }
 
 pub(crate) fn day12() {
-    let filename = "input/12.txt";
+    let filename = "input/day12/input.txt";
 
     let mut vertices: HashMap<String, Vertex> = HashMap::new();
     if let Ok(lines) = read_lines(filename) {

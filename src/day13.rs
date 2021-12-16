@@ -2,7 +2,7 @@ use crate::io::read_lines;
 use std::collections::HashSet;
 
 pub(crate) fn day13() {
-    let filename = "input/13.txt";
+    let filename = "input/day13/input.txt";
 
     let mut points: HashSet<Point> = HashSet::new();
     let mut instructions: Vec<Instruction> = Vec::new();

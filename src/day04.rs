@@ -2,7 +2,7 @@ use crate::io::read_lines;
 use std::collections::HashSet;
 
 pub(crate) fn day04() {
-    if let Ok(mut lines) = read_lines("input/04.txt") {
+    if let Ok(mut lines) = read_lines("input/day04/input.txt") {
         let numbers: Vec<i32> = lines.next().unwrap().unwrap()
             .split(',')
             .map(|s| s.parse().unwrap())

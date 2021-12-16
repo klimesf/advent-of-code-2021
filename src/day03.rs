@@ -1,7 +1,7 @@
 use crate::io::read_lines;
 
 pub fn day03() {
-    let filename = "input/03.txt";
+    let filename = "input/day03/input.txt";
 
     let mut numbers: Vec<String> = Vec::new();
 

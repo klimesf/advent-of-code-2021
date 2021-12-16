@@ -1,7 +1,7 @@
 use crate::io::read_lines;
 
 pub(crate) fn day06() {
-    let filename = "input/06.txt";
+    let filename = "input/day06/input.txt";
 
     if let Ok(mut lines) = read_lines(filename) {
         let numbers: Vec<usize> = lines.next().unwrap().unwrap()

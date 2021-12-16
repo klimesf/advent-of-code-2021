@@ -10,7 +10,7 @@ struct Measurement {
 }
 
 pub(crate) fn day08() {
-    let filename = "input/08.txt";
+    let filename = "input/day08/input.txt";
 
     let mut measurements: Vec<Measurement> = vec!();
 

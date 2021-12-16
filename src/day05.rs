@@ -17,7 +17,7 @@ struct Point {
 }
 
 pub fn day05() {
-    let filename = "input/05.txt";
+    let filename = "input/day05/input.txt";
 
     for i in 2..=1 {
         print!("{}", i)
