@@ -1,3 +1,4 @@
+extern crate cached;
 extern crate itertools;
 extern crate priority_queue;
 
