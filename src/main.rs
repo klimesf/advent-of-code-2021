@@ -1,11 +1,11 @@
 extern crate itertools;
 extern crate priority_queue;
 
-use crate::day20::day20;
+use crate::day21::day21;
 
 mod io;
-mod day20;
+mod day21;
 
 fn main() {
-    day20();
+    day21();
 }
