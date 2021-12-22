@@ -1,12 +1,13 @@
 extern crate cached;
 extern crate itertools;
 extern crate priority_queue;
+extern crate regex;
 
-use crate::day21::day21;
+use crate::day22::day22;
 
 mod io;
-mod day21;
+mod day22;
 
 fn main() {
-    day21();
+    day22();
 }
