@@ -3,11 +3,11 @@ extern crate itertools;
 extern crate priority_queue;
 extern crate regex;
 
-use crate::day22::day22;
+use crate::day24::day24;
 
 mod io;
-mod day22;
+mod day24;
 
 fn main() {
-    day22();
+    day24();
 }
