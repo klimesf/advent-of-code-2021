@@ -1,0 +1,234 @@
+inp w           // read first digit into w (D, 0, 0, 0)
+mul x 0         // neutralize x (D, 0, 0, 0)
+add x z         // add z into x (D, 0, 0, 0)
+mod x 26        // moddulo x by 26 (D, 0, 0, 0)
+div z 1         // noop - divide z by 1
+add x 11        // add 11 into x (D, 11, 0, 0)
+eql x w         // x = x==w (D, 0/1, 0, 0)
+eql x 0         // x = x==0 (D, 1/0, 0, 0) => should always be (D, 1, 0, 0)
+mul y 0         // annulate y (D, 1, 0, 0)
+add y 25        // add 25 too y (D, 1, 25, 0)
+mul y x         // multiply y by x (D, 1, 25, 0)
+add y 1         // add 1 to y (D, 1, 26, 0)
+mul z y         // multiply z by y (D, 1, 26, 0)
+mul y 0         // annulate y (D, 1, 0, 0)
+add y w         // add w to y (D, 1, D, 0)
+add y 5         // add 5 to y (D, 1, D+5, 0)
+mul y x         // noop, x should always be 1
+add z y         // add y to z (D, 1, D+5, D+5)
+inp w           // read second digit into w (E, 1, D+5, D+5)
+mul x 0         // annulate x (E, 0, D+5, D+5)
+add x z         // add z to x (E, D+5, D+5, D+5)
+mod x 26        // mod x by 26 (E, (D+5)%26, D+5, D+5)
+div z 1         // noop
+add x 12        // add 12 to x (E, (D+5)%26 + 12, D+5, D+5)
+eql x w         // if (D+5)%26 == E, x = 1 (E, 0|1, D+5, D+5)
+eql x 0         // swap x
+mul y 0         // annulate y (E, 1|0, 0, D+5)
+add y 25        // add 25 to y (E, 1|0, 25, D+5)
+mul y x         // multiply y by x (E, 1|0, 25|0, D+5)
+add y 1         // add 1 to y (E, 1|0, 26/|, D+5)
+mul z y         // multiply z by y (E, 1|0, 26|1, 26|1 * D+5)
+mul y 0         // annulate y (E, 1|0, 0, 26|1 * D+5)
+add y w         // add w to y (E, 1|0, E, 26|1 * D+5)
+add y 1         // add 1 to y (E, 1|0, E + 1, 26|1 * D+5)
+mul y x         // multiply y by x (E, 1|0, 0| E + 1, 26|1 * D+5
+add z y         // add y to z (E, 1|0, 0 | E+1, (26|1 * D+5) + (0|E+1))
+inp w           // (F, 1|0, 0 | E+1, (26|1 * D+5) + (0|E+1))
+mul x 0         // (F, 0, 0 | E+1, (26|1 * D+5) + (0|E+1))
+add x z         // (F, (26|1 * D+5) + (0|E+1), 0 | E+1, (26|1 * D+5) + (0|E+1))
+mod x 26        // (F, ((26|1 * D+5) + (0|E+1)) % 26, 0 | E+1, (26|1 * D+5) + (0|E+1))
+div z 1
+add x 15        // (F, ((26|1 * D+5) + (0|E+1)) % 26 + 15, 0 | E+1, (26|1 * D+5) + (0|E+1))
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 15
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 2
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -1
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 2
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 5
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -8
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 8
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -7
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 14
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -8
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 12
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 7
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -2
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 14
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -2
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 13
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 6
+mul y x
+add z y
